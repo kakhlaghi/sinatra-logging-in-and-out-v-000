@@ -22,6 +22,7 @@ class ApplicationController < Sinatra::Base
 
   get '/account' do
     @user = User.find_by_id(params[:id])
+    if @user
     erb :account
   end
 
